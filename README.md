@@ -18,14 +18,14 @@
 ## Índice
 
 - [Índice](#índice)
-  - [Instalaciones](#Instalaciones)
+  - [Introducción](#Introducción)
     - [Instalar IntelliJ IDEA](#Instalar-IntelliJ-IDEA)
     - [Variables](#variable)
     
 
 ---
 
-### Instalaciones
+### Introducción
 
 #### Instalar IntelliJ IDEA
 
@@ -61,6 +61,32 @@ public class Variables {
 }
 ```
 
-**[⬆ Volver a índice](#índice)**
+- Java nos permite actualizar nuestras variables reutilizando los valores que tenían anteriormente, de esta forma evitamos errores o inconsistencias en nuestro código:
 
+```java
+public class Example {
+  public static void main(String[] args) {
+    // Actualizar datos numéricos:
+    int salario = 1000;
+    salario = salario + 200;
+    System.out.println(salario); // 1200
+
+    salario += 300;
+    System.out.println(salario); // 1500
+
+    // Actualizar variables de tipo String:
+    String nombre = "Santiago";
+    nombre = nombre + " Castillo";
+    System.out.println(nombre); // Santiago Castillo
+
+    nombre += " De León";
+    System.out.println(nombre); // Santiago Castillo De León
+
+    nombre = "Alex" + nombre;
+    System.out.println(nombre); // Alex Santiago Castillo De León
+  }
+}
+
+```
+**[⬆ Volver a índice](#índice)**
 ---
