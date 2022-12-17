@@ -104,6 +104,14 @@ public class Example {
 
 ```
 
+| File          | Purpose |
+| ------------- | ------- |
+| `index.d.ts`  | This contains the typings for the package. |
+| [`<my-package>-tests.ts`](#my-package-teststs)  | This contains sample code which tests the typings. This code does *not* run, but it is type-checked. |
+| [`tsconfig.json`](#tsconfigjson) | This allows you to run `tsc` within the package. |
+| [`tslint.json`](#linter-tslintjson)   | Enables linting. |
+| [`.eslintrc.json`](#linter-eslintrcjson)   | (Rarely) Needed only to disable lint rules written for eslint. |
+
 **[⬆ Volver a índice](#índice)**
 
 ---
