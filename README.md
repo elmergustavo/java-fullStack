@@ -104,6 +104,18 @@ public class Example {
 
 ```
 
+## Convención de Nombres en Java
+Una convención de nombres es un patrón que deben seguir los nombres de las variables para que el código esté organizado, entendible y sin repetidos.
+
+Java es sensible a mayúsculas y minúsculas, este punto es clave al seguir una convención.
+
+Las variables siempre deben comenzar con un simbolo de letra, `$` o `_`.
+
+No puedes usar el simbolo `-` en ninguna parte de la variable.
+
+Las variables constantes son variables cuyo valor nunca va a cambiar, por lo que se deben escribir completamente en mayúsculas y usando el caracter `_`.
+
+
 | File          | Purpose |
 | ------------- | ------- |
 | `index.d.ts`  | This contains the typings for the package. |
