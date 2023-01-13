@@ -164,43 +164,54 @@ float nF = 123.456F;
 
 
 ```java
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-       //byte, short, int, long
+
+        //byte, short, int, long
         System.out.println("bits tipo byte:" + Byte.SIZE);
         System.out.println("bytes tipo byte:" + Byte.BYTES);
         System.out.println("valor minimo tipo byte:" + Byte.MIN_VALUE);
         System.out.println("valor maximo tipo byte:" + Byte.MAX_VALUE);
+
         System.out.println();
+
         System.out.println("bits tipo short:" + Short.SIZE);
         System.out.println("bytes tipo short:" + Short.BYTES);
         System.out.println("valor minimo tipo short:" + Short.MIN_VALUE);
         System.out.println("valor maximo tipo short:" + Short.MAX_VALUE);
+
         System.out.println();
+
         System.out.println("bits tipo int:" + Integer.SIZE);
         System.out.println("bytes tipo int:" + Integer.BYTES);
         System.out.println("valor minimo tipo int:" + Integer.MIN_VALUE);
         System.out.println("valor maximo tipo int:" + Integer.MAX_VALUE);
+
         System.out.println();
+
         System.out.println("bits tipo long:" + Long.SIZE);
         System.out.println("bytes tipo long:" + Long.BYTES);
         System.out.println("valor minimo tipo long:" + Long.MIN_VALUE);
         System.out.println("valor maximo tipo long:" + Long.MAX_VALUE);
 
-        byte byteVar = 15;
-        System.out.println("byteVar = " + byteVar);
-        short shortVar = 100;
-        System.out.println("shortVar = " + shortVar);
-        int intVar = 500;
-        System.out.println("intVar = " + intVar);
-        long longVar = 1000;
-        System.out.println("longVar = " + longVar);
+        System.out.println();
 
-        var numero = 10;
-        System.out.println("numero = " + numero);
+        System.out.println("bits tipo float:" + Float.SIZE);
+        System.out.println("bytes tipo float:" + Float.BYTES);
+        System.out.println("valor minimo tipo float:" + Float.MIN_VALUE);
+        System.out.println("valor maximo tipo float:" + Float.MAX_VALUE);
 
+        System.out.println();
+
+        System.out.println("bits tipo Double:" + Double.SIZE);
+        System.out.println("bytes tipo Double:" + Double.BYTES);
+        System.out.println("valor minimo tipo Double:" + Double.MIN_VALUE);
+        System.out.println("valor maximo tipo Double:" + Double.MAX_VALUE);
+
+        System.out.println();
+
+        System.out.println("bits tipo char:" + Character.SIZE);
+        System.out.println("bytes tipo char:" + Character.BYTES);
     }
 }
 
@@ -223,13 +234,16 @@ Recuerda que esto solo funciona con versiones superiores a Java 10.
 
 
 
-| File          | Purpose |
-| ------------- | ------- |
-| `index.d.ts`  | This contains the typings for the package. |
-| [`<my-package>-tests.ts`](#my-package-teststs)  | This contains sample code which tests the typings. This code does *not* run, but it is type-checked. |
-| [`tsconfig.json`](#tsconfigjson) | This allows you to run `tsc` within the package. |
-| [`tslint.json`](#linter-tslintjson)   | Enables linting. |
-| [`.eslintrc.json`](#linter-eslintrcjson)   | (Rarely) Needed only to disable lint rules written for eslint. |
+| Tipo de dato  | Bits | bytes | Rango |
+| ------------- | ---- | ----- | ----- |
+| `byte`  | 8 | 1 | -128 hasta 127
+| `short`   | 16 | 2 | -32768 hasta 32767
+| `int` | 32 | 4 | -2147483648 hasta 2147483647 |
+| `long` | 64 | 8 | -9223372036854775808 hasta 9223372036854775807 |
+| `float` | 32 | 4 | 1.4E-45 hasta 3.4028235E38 |
+| `double` | 64 | 8 | 4.9E-324 hasta 1.7976931348623157E308 |
+| `char` | 16 | 2 | solo puede almacenar 1 dígito o un carácter |
+| `boolean` | 16 | 2 | Son un tipo de dato lógico, solo aceptan los valores `true` o `false` |
 
 **[⬆ Volver a índice](#índice)**
 
