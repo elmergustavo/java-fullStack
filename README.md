@@ -57,6 +57,46 @@ Si quieres unirte a nuestra comunidad de desarrollo, aprender programación de A
 
 - Las variables en Java se componen de un nombre único y un valor que puede cambiar a lo largo de la ejecución del programa. Al declarar las variables debemos definir el tipo de dato que vamos a usar y un punto y coma al final:
 
+
+## Categorías de Tipos en Java
+
+En Java, los tipos se pueden clasificar en las siguientes categorías:
+
+1. **Tipos primitivos:**
+   - `boolean`: representa un valor booleano (`true` o `false`).
+   - `byte`: representa un número entero de 8 bits.
+   - `short`: representa un número entero de 16 bits.
+   - `int`: representa un número entero de 32 bits.
+   - `long`: representa un número entero de 64 bits.
+   - `float`: representa un número de punto flotante de 32 bits.
+   - `double`: representa un número de punto flotante de 64 bits.
+   - `char`: representa un carácter Unicode de 16 bits.
+
+2. **Clases Wrapper:**
+   - `Boolean`: wrapper para `boolean`.
+   - `Byte`: wrapper para `byte`.
+   - `Short`: wrapper para `short`.
+   - `Integer`: wrapper para `int`.
+   - `Long`: wrapper para `long`.
+   - `Float`: wrapper para `float`.
+   - `Double`: wrapper para `double`.
+   - `Character`: wrapper para `char`.
+
+3. **Tipos de referencia:**
+   - `String`: representa una secuencia de caracteres.
+   - `Object`: es la clase base de todas las clases en Java.
+   - `Array`: representa un arreglo de elementos.
+   - `Class`: representa la información de una clase en tiempo de ejecución.
+   - `Interface`: representa una interfaz.
+
+4. **Tipos enumerados (Enums):** Son un tipo especial de clase que representa un conjunto fijo de constantes.
+
+Además de estas categorías, Java también ofrece otras estructuras y tipos de datos para almacenar y manipular colecciones de elementos, como `List`, `Set`, `Map`, entre otros. Estos tipos están definidos en el paquete `java.util`.
+
+Es importante tener en cuenta que Java es un lenguaje de tipado estático, lo que significa que los tipos de las variables deben ser declarados explícitamente antes de usarlas. Cada variable tiene un tipo específico y solo puede almacenar valores compatibles con ese tipo.
+
+
+
 ```java
 // Variables.java
 
