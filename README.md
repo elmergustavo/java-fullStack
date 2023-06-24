@@ -404,216 +404,112 @@ public class Persona {
 
 Los comentarios son una buena práctica de programación y te ayudan a mantener tu código organizado y comprensible. Utilízalos para explicar la lógica detrás de tu código, documentar decisiones importantes o proporcionar instrucciones a otros programadores que puedan trabajar en el mismo código en el futuro.
 
-
 ---
 
-## Operadores de asignación:
-* `+=`: a += b es equivalente a `a = a + b`.
-* `-=`: a -= b es equivalente a `a = a - b`.
-* `*=`: a *= b es equivalente a `a = a * b`.
-* `/=`: a /= b es equivalente a `a = a / b`.
-* `%=`: a %= b es equivalente a `a = a % b`.
+## Operadores Aritméticos:
+```java
+int a = 10;
+int b = 5;
 
-## Operadores de incremento:
+int suma = a + b; // suma = 15
+int resta = a - b; // resta = 5
+int multiplicacion = a * b; // multiplicacion = 50
+int division = a / b; // division = 2
+int modulo = a % b; // modulo = 0
 
-* `++`: i++ es equivalente a `i = i + 1`.
-* `--`: i-- es equivalente a `i = i - 1`.
+## Operadores de Asignación:
+```java
+int x = 10;
 
-Podemos usar estos operadores de forma prefija (++i) o postfija (i++). La diferencia está en qué operación se ejecuta primero:
+x += 5; // equivalente a x = x + 5;
+x -= 3; // equivalente a x = x - 3;
+x *= 2; // equivalente a x = x * 2;
+x /= 4; // equivalente a x = x / 4;
+x %= 3; // equivalente a x = x % 3;
+```
+
+## Operadores de Comparación:
+```java
+int a = 10;
+int b = 5;
+
+boolean igual = (a == b); // false
+boolean diferente = (a != b); // true
+boolean mayor = (a > b); // true
+boolean menor = (a < b); // false
+boolean mayorIgual = (a >= b); // true
+boolean menorIgual = (a <= b); // false
+```
+
+## Operadores de Incremento y Decremento:
+```java
+int x = 5;
+
+x++; // incremento en 1, x = 6
+x--; // decremento en 1, x = 5
+
+int y = 10;
+int z = ++y; // incremento antes de asignar, z = 11, y = 11
+
+int w = 10;
+int v = w++; // incremento después de asignar, v = 10, w = 11
+```
+
+## Operadores Lógicos:
+```java
+boolean a = true;
+boolean b = false;
+
+boolean and = (a && b); // false
+boolean or = (a || b); // true
+boolean not = !a; // false
+```
+
+```
+
+# Operaciones matemáticas con la clase Math en Java
+
+En Java, puedes realizar operaciones matemáticas comunes utilizando la clase `Math`. Esta clase proporciona métodos estáticos para realizar cálculos matemáticos sin tener que implementar las operaciones desde cero.
+
+## Ejemplos de uso
+
+Aquí tienes algunos ejemplos de cómo utilizar la clase `Math` en Java:
+
+### Operaciones básicas:
 
 ```java
-// Incremento postfijo:
-int vidas = 5;
-int regalo = 100 + vidas++;
+double x = 4.3;
+double y = 2.5;
 
-System.out.println("Regalo: " + regalo + ", vidas: " + vidas);
-// Regalo: 105, vidas: 6
-
-// Incremento prefijo:
-int vidas = 5;
-int regalo = 100 + ++vidas;
-
-System.out.println("Regalo: " + regalo + ", vidas: " + vidas);
-// Regalo: 106, vidas: 6
+double max = Math.max(x, y); // Obtiene el valor máximo entre x e y (max = 4.3)
+double min = Math.min(x, y); // Obtiene el valor mínimo entre x e y (min = 2.5)
+double abs = Math.abs(-5.6); // Obtiene el valor absoluto de -5.6 (abs = 5.6)
+double sqrt = Math.sqrt(25); // Obtiene la raíz cuadrada de 25 (sqrt = 5.0)
 ```
-
-## Operaciones matemáticas
-
-`Math` es una clase de Java que nos ayuda a ejecutar diferentes operaciones matemáticas:
-
+### Funciones trigonométricas:
 ```java
-Math.PI // 3.141592653589793
-Math.E // 2.718281828459045
+double angle = 45.0;
+double radians = Math.toRadians(angle); // Convierte el ángulo a radianes
+double sin = Math.sin(radians); // Calcula el seno del ángulo (sin = 0.7071)
+double cos = Math.cos(radians); // Calcula el coseno del ángulo (cos = 0.7071)
+double tan = Math.tan(radians); // Calcula la tangente del ángulo (tan = 1.0)
 
-Math.ceil(2.1) // 3.0 (redondear hacia arriba)
-Math.floar(2.1) // 2.0 (redondear hacia abajo)
-
-Math.pow(2, 3) // 8.0 (número elevado a una potencia)
-Math.sqrt(3) // 1.73... (raíz cuadrada)
-
-Math.max(2, 3) // 3.0 (el número más grande)
-
-// Área de un círculo (PI * r^2):
-Math.PI * Math.pow(r, 2)
-
-// Área de una esfera (4 * PI * r^2):
-4 * Math.PI * Math.pow(r, 2)
-
-// Volumen de una esfera ( (4/3) * PI * r^3):
-(4/3) * Math.PI * Math.pow(r, 3)
 ```
 
-### Ejemplo
-
+### Funciones exponenciales y logarítmicas:
 ```java
-public class MathematicOperations {
-    public static void main(String[] args) {
-        //Valores enteros
-        int a = 5;
-        int b = 10;
+double power = Math.pow(2, 3); // Calcula 2 elevado a la potencia de 3 (power = 8.0)
+double exp = Math.exp(1.0); // Calcula el exponencial de 1.0 (exp = 2.7183)
+double log = Math.log(10.0); // Calcula el logaritmo natural de 10.0 (log = 2.3026)
+double log10 = Math.log10(100.0); // Calcula el logaritmo base 10 de 100.0 (log10 = 2.0)
 
-        //Valores con decimales
-        double i = 2.1;
-        double j = 3.5;
-
-        //Redondea hacia arriba
-        System.out.println(Math.ceil(i));
-
-        //Redondea hacia abajo
-        System.out.println(Math.floor(j));
-
-        //Devuelve el valor mayor
-        System.out.println(Math.max(a,b));
-
-        //Imprime un numero elevado a otro
-        System.out.println(Math.pow(a,b));
-
-        //Devuelve el valor absoluto de un argumento dado
-        System.out.println(Math.abs(j));
-
-        //Devuelve la suma de sus argumentos
-        System.out.println(Math.addExact(a,b));
-
-        //Devuelve la tangente del arco de un angulo (-pi/2 y pi/2)
-        System.out.println(Math.atan(j));
-
-        //Devuelve la raiz cubica de un valor double
-        System.out.println(Math.cbrt(i));
-
-        //Devuvleve el coseno hiperbolico de un valor double
-        System.out.println(Math.cosh(j));
-
-        //Devuelve el coseno trigonometrico de un angulo
-        System.out.println(Math.cos(j));
-
-        //Devuelve el numero elevado a la potencia de un valor double
-        System.out.println(Math.exp(i));
-    }
-}
 ```
 
-### otro ejemplo
-
-```java 
-import java.util.Scanner;
-
-
-public class JavaOperadores1 {
-    public static void main(String[] args) {
-        //Permite ingresar datos por teclado
-        Scanner s = new Scanner(System.in);
-        System.out.println("Ingrese 5 numeros");
-        
-        var num1 = s.nextInt();
-        var num2 = s.nextInt();
-        var num3 = s.nextInt();
-        var num4 = s.nextInt();
-        var num5 = s.nextInt();
-
-        //Esto lo logre luego de buscar un buen rato.
-        //Math.max y Math.min devuelve un valor entre dos numeros, por lo tanto se hace una comparacion en secuencia
-        var max = Math.max(Math.max(Math.max(Math.max(num1, num2), num3), num4), num5);
-        var min = Math.min(Math.min(Math.min(Math.min(num1, num2), num3), num4), num5);
-
-        //Devuelve el numero mayor
-        System.out.println("El numero maximo es: " + max);
-        //Devuelve el numero menor
-        System.out.println("El numero minimo es: " + min);
-
-        //La raiz del num3
-
-        System.out.println("La raiz cuadrada de " + num3 + " es " + Math.sqrt(num3));
-
-        //La potencia del num1 con el numero 5
-        System.out.println("La potencia del " + num1 + " con el " + num5 + " es " + Math.pow(num1, num5));
-
-    }
-}
-```
-
-## Cast en variables: Estimación y Exactitud
-En la programación hay situaciones donde necesitamos cambiar el tipo de dato de nuestras variables, esto lo conocemos como Cast.
-
-Estimación:
-
+### Generación de números aleatorios:
 ```java
-double monthlyDogs = dogsQuantity / 12.0;
-// monthlyDogs: 2.5 (pero no es posible, ¡no rescatamos medio perrito!)
+double random = Math.random(); // Genera un número aleatorio entre 0.0 y 1.0
+int randomInt = (int) (Math.random() * 10); // Genera un número aleatorio entre 0 y 9
 
-int estimatedMonthlyDogs = (int) monthlyDogs;
-// estimatedMonthlyDogs: 2
-
-// Recuerda que el casteo no redondea, solo quita los decimales:
-Math.sqrt(3) // 1.7320508075688772
-(int) Math.sqrt(3) // 1
 ```
 
-Exactitud:
-
-```java
-int a = 30;
-int b = 12;
-
-a / b // 2
-(double) a / b // 2.5
-```
-
-## Casteo entre tipos de datos
-
-Java nos ayuda a realizar casteo automático de los tipos de datos más chicos a otros más grandes.
-
-Sin embargo, en algunos casos vamos a necesitar realizar un cast manualmente, así como aprendimos en la clase anterior `((dataType) variableOperación)`.
-
-Por ejemplo: supongamos que declaramos dos variables `a` y `b` de tipo `int` y una variable `c` de tipo `double` que es igual a la división de las primeras dos variables.
-
-En este caso, aunque definimos que el tipo de dato de `c` es `double`, Java automáticamente convertirá el resultado de la división a tipo `int`, ya que este es el tipo de datos de las dos variables que dividimos, pero seguirá respetando que la variable `c` es de tipo `double` y añadirá un decimal al final `(.0)`.
-
-Esto significa que muchas de nuestras operaciones pueden verse afectadas. Por ejemplo:
-
-
-```java
-int a = 30;
-int b = 12;
-
-double c = a / b;
-System.out.println(c); // 2.0 (??)
-```
-
-En este caso, ya que Java convierte nuestras variables automáticamente, debemos indicarle a nuestra variable c (de tipo double) que debe hacer cast de su valor para que Java no altere los valores de las variables y el resultado de la operación sea correcto:
-
-```java
-int a = 30;
-int b = 12;
-
-double c = (double) a / b;
-System.out.println(c); // 2.5
-```
-
-Es decir, como `a` y `b` son de tipo `int`, el resultado de una operación entre ambas variables será de tipo `int`, por lo que no tendrá decimales, pero si guardamos el resultado de esta división en una variable de tipo `double` añadiremos un `.0`.
-
-Esto podemos solucionarlo si indicamos que además de que la variable `c` es de tipo `double`, el valor de esta variable también debe ser de tipo `double`. Esto significa que Java ejecutará la división entre `a` y `b` como si fueran de tipo `double`, por lo que tendrán decimales a pesar de haber sido definidas inicialmente como números enteros.
-
-
-
-
-
+Estos son solo algunos ejemplos de cómo puedes utilizar el operador Math en Java. La clase Math proporciona muchos más métodos para realizar operaciones matemáticas más complejas. Puedes consultar la documentación oficial de Java para obtener más información sobre los métodos disponibles en la clase `Math`.
