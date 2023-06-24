@@ -145,62 +145,111 @@ public class Example {
 
 ```
 
-## Convención de Nombres en Java
-Una convención de nombres es un patrón que deben seguir los nombres de las variables para que el código esté organizado, entendible y sin repetidos.
+## Reglas para Definir Nombres de Variables en Java
 
-Java es sensible a mayúsculas y minúsculas, este punto es clave al seguir una convención.
+Aquí tienes algunas reglas para definir nombres de variables en Java:
 
-Las variables siempre deben comenzar con un simbolo de letra, `$` o `_`.
+1. Los nombres de variables en Java son sensibles a mayúsculas y minúsculas, lo que significa que `miVariable` y `mivariable` se considerarán como dos variables diferentes.
 
-No puedes usar el simbolo `-` en ninguna parte de la variable.
+2. Los nombres de variables deben comenzar con una letra, un guion bajo (`_`) o un símbolo de dólar (`$`). No pueden comenzar con un número.
 
-Las variables constantes son variables cuyo valor nunca va a cambiar, por lo que se deben escribir completamente en mayúsculas y usando el caracter `_`.
+3. Después del primer carácter, los nombres de variables pueden contener letras, dígitos, guiones bajos y símbolos de dólar.
 
-## Técnica de Naming: Camel Case
+4. Los nombres de variables no pueden ser palabras reservadas de Java, como `int`, `boolean`, `if`, `for`, entre otras. Puedes encontrar una lista completa de palabras reservadas en la documentación oficial de Java.
 
-Camel Case es una convención muy popular para nombrar nuestras variables. Podemos usarlo en modo Upper Camel Case o Lower Camel Case, la diferencia es si comenzamos el nombre de la variable con mayúscula o minúscula.
+5. Es una buena práctica utilizar nombres descriptivos para las variables, que indiquen su propósito o contenido. Por ejemplo, en lugar de usar nombres como `a`, `x` o `temp`, es preferible utilizar nombres como `edad`, `nombreUsuario` o `totalVentas`.
 
+6. Se recomienda seguir una convención de nomenclatura llamada CamelCase, donde la primera letra de la variable comienza en minúscula y las primeras letras de las palabras subsiguientes se capitalizan. Por ejemplo: `nombreUsuario`, `totalVentas`, `saldoCuenta`.
+
+7. Evita utilizar nombres de variables demasiado largos y complicados, ya que esto puede dificultar la legibilidad del código. Busca un equilibrio entre nombres descriptivos y concisos.
+
+Recuerda seguir estas convenciones al nombrar tus variables en Java para mantener un código legible y comprensible.
+
+## Convenciones de Nomenclatura para Clases y Métodos en Java
+
+A continuación, se presentan las convenciones de nomenclatura recomendadas para clases y métodos en Java:
+
+### Clases
+
+- Los nombres de las clases deben comenzar con una letra mayúscula y seguir el estilo CamelCase.
+- Utiliza nombres descriptivos que reflejen el propósito y la responsabilidad de la clase.
+- Evita nombres de clases demasiado genéricos o ambiguos.
+
+Ejemplo: 
 ```java
-// Upper Camel Case:
-class SoyUnaClase {};
-
-// Lower Camel Case
-int soyUnNumeroInt = 10;
+public class MiClase {
+    // código de la clase
+}
 ```
 
-🐫Debemos usar Upper Camel Case en los nombres de las clases y archivos. Y Lower Camel Case en los nombres de las variables o métodos.
-🐍Snake Case: para constantes
 
-## Tipos de datos numéricos
+### Métodos
 
-Tipos de datos para números enteros (sin decimales):
-
-* byte: Ocupa 1 byte de memoria y su rango es de -128 hasta 127.
-* short: Ocupa 2 bytes de memoria y su rango es de -32,768 hasta 32,727.
-int: Ocupa 4 bytes de memoria y su rango es de -2,147,483,648 hasta 2,147,483,647. Es muy cómodo de usar, ya que no es tan pequeño para que no quepan nuestros números ni tan grande como para desperdiciar mucha memoria. Puede almacenar hasta 10 dígitos.
-* long: Ocupa 8 bytes de memoria y su rango es de -9,223,372,036,854,775,808 hasta 9,223,372,036,854,775,807. Para diferenciarlo de un tipo de dato long debemos terminar el número con la letra L.
-* Por ejemplo:
-```java
-// Int:
-int n = 1234567890;
-
-// Long:
-long nL = 123456789012345L;
-```
-
-Tipos de datos para números flotantes (con decimales):
-
-* float: Ocupan 4 bytes de memoria y su rango es de 1.40129846432481707e-45 hasta 3.40282346638528860e+38. Así como long, debemos colocar una letra F al final.
-* double: Ocupan 8 bytes de memoria y su rango es de 4.94065645841246544e-324d hasta 1.79769313486231570e+308d.
-* Por ejemplo:
+- Los nombres de los métodos deben comenzar con una letra minúscula y seguir el estilo camelCase.
+- Utiliza nombres descriptivos que indiquen la acción realizada por el método.
+- Los nombres de los métodos deben ser verbos o frases verbales.
 
 ```java
-// Double:
-double nD = 123.456123456;
-
-// Float
-float nF = 123.456F;
+public void calcularPromedio() {
+    // código del método
+}
 ```
+
+### Métodos de Acceso (Getters y Setters)
+
+- Los métodos de acceso deben seguir la convención de los métodos normales.
+- Utiliza el prefijo "get" para los métodos que devuelven el valor de una propiedad.
+- Utiliza el prefijo "set" para los métodos que establecen el valor de una propiedad.
+
+```java
+public int getEdad() {
+    return edad;
+}
+
+public void setEdad(int edad) {
+    this.edad = edad;
+}
+```
+
+Recuerda seguir estas convenciones de nomenclatura al escribir tus clases y métodos en Java para mantener un código consistente y legible.
+
+
+# Tipos de Datos Numéricos en Java
+
+En Java, existen varios tipos de datos numéricos que se utilizan para representar diferentes rangos y precisiones de valores numéricos. A continuación, se presentan algunos ejemplos de estos tipos de datos numéricos:
+
+- `byte`: Representa números enteros de 8 bits con signo. Su rango va desde -128 hasta 127.
+
+```java
+byte myByte = 10;
+```
+- `short`: Representa números enteros de 16 bits con signo. Su rango va desde -32,768 hasta 32,767.
+```java
+short myShort = 1000;
+```
+
+- `int`: Representa números enteros de 32 bits con signo. Es el tipo de dato numérico más común en Java. Su rango va desde -2,147,483,648 hasta 2,147,483,647.
+```java
+int myInt = 100000;
+```
+
+- `long`: Representa números enteros de 64 bits con signo. Debes agregar una "L" al final del valor para indicar que es un tipo long. Su rango va desde -9,223,372,036,854,775,808 hasta 9,223,372,036,854,775,807.
+```java
+long myLong = 10000000000L;
+```
+
+- `float`: Representa números de punto flotante de 32 bits. Debes agregar una "f" o "F" al final del valor para indicar que es un tipo float.
+```java
+float myFloat = 3.14f;
+```
+
+- `double`: Representa números de punto flotante de 64 bits. Es el tipo de dato numérico decimal más común en Java. No es necesario agregar nada al final del valor para indicar que es un tipo double.
+```java
+double myDouble = 3.14159;
+
+```
+
+Estos son solo algunos ejemplos de los tipos de datos numéricos en Java. Puedes utilizar estos tipos de datos para almacenar y manipular diferentes valores numéricos en tus programas Java.
 
 
 ```java
@@ -256,21 +305,46 @@ public class Main {
 }
 
 ```
+# Tipos de Datos en Java
 
-## Tipos de datos char y boolean
+En Java, además de los tipos de datos numéricos, existen otros tipos de datos que se utilizan para diferentes propósitos. A continuación se presentan algunos de estos tipos de datos:
 
-* `char`: Ocupa 2 bytes y solo puede almacenar 1 dígito, debemos usar comillas simples en vez de comillas dobles.
-* `boolean`: Son un tipo de dato lógico, solo aceptan los valores true y false. También ocupa 2 bytes y almacena únicamente 1 dígito.
+- `boolean`: Representa un valor de verdad, que puede ser `true` (verdadero) o `false` (falso). Se utiliza principalmente en estructuras de control condicionales.
 
-Seguro te diste cuenta que siempre debemos escribir el tipo de dato de nuestras variables antes de definir su nombre y valor. Pero esto cambia a partir de Java 10: solo debemos escribir la palabra reservada var y Java definirá el tipo de dato de nuestras variables automáticamente:
+- `char`: Representa un solo carácter Unicode. Se declara utilizando comillas simples (' '). Por ejemplo, `char myChar = 'A';`.
+
+- `String`: Representa una secuencia de caracteres. Aunque técnicamente no es un tipo de dato primitivo, se utiliza ampliamente en Java para representar texto y se trata de manera especial en el lenguaje.
+
+- Arreglo (`array`): Representa una colección de elementos del mismo tipo. Permite almacenar múltiples valores en una única variable. Se declara utilizando corchetes []. Por ejemplo, `int[] myArray = {1, 2, 3};`.
+
+- Enumerado (`enum`): Representa un conjunto de constantes predefinidas. Se utiliza para definir un conjunto de valores permitidos para una variable. Por ejemplo, `enum Day {MONDAY, TUESDAY, WEDNESDAY};`.
+
+
+# Palabra reservada `var` en Java
+
+la palabra reservada var se introdujo en la versión 10 del lenguaje y se utiliza para declarar variables con inferencia de tipos. Con `var`, el tipo de dato de la variable se infiere automáticamente a partir del valor que se le asigna en el momento de la declaración.
+
+Algunas consideraciones sobre el uso de `var` en Java:
+
+- **Inferencia de tipos**: Al utilizar `var`, el compilador deduce automáticamente el tipo de dato de la variable basándose en el valor asignado.
+
+- **Uso local**: `var` solo se puede utilizar para declarar variables locales dentro de métodos o bloques de código.
+
+- **Tipo estático**: Aunque el tipo de dato se infiere automáticamente, la variable sigue siendo fuertemente tipada.
+
+- **Inicialización requerida**: Es obligatorio inicializar la variable al momento de la declaración.
+
+Aquí tienes un ejemplo de cómo se utiliza `var` en Java:
 
 ```java
-var salary = 1000; // INT
-var pension = salary * 0.03; // DOUBLE
-var totalSalary = salary - pension; // DOUBLE
-```
+var message = "Hola, mundo!"; // El tipo de dato de 'message' se infiere como String
+var number = 10; // El tipo de dato de 'number' se infiere como int
+var pi = 3.14; // El tipo de dato de 'pi' se infiere como double
 
-Recuerda que esto solo funciona con versiones superiores a Java 10.
+System.out.println(message);
+System.out.println(number);
+System.out.println(pi);
+
 
 
 
