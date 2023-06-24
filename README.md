@@ -465,8 +465,6 @@ boolean or = (a || b); // true
 boolean not = !a; // false
 ```
 
-```
-
 # Operaciones matemáticas con la clase Math en Java
 
 En Java, puedes realizar operaciones matemáticas comunes utilizando la clase `Math`. Esta clase proporciona métodos estáticos para realizar cálculos matemáticos sin tener que implementar las operaciones desde cero.
