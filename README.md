@@ -363,6 +363,50 @@ System.out.println(pi);
 
 ---
 
+## Comentarios en Java
+
+En Java, los comentarios se utilizan para agregar notas o explicaciones en el código fuente. Los comentarios no se ejecutan como parte del programa y son ignorados por el compilador. Son útiles para hacer el código más legible y comprensible para otros programadores o para tu futuro yo.
+
+Java admite tres tipos de comentarios:
+
+- **Comentarios de una línea**: Estos comentarios se utilizan para agregar notas breves en una sola línea.
+```java
+// Esto es un comentario de una línea
+int x = 5; // También se pueden agregar comentarios después del código en la misma línea
+```
+
+- **Comentarios de múltiples líneas**: Estos comentarios se utilizan para agregar notas o explicaciones más extensas que abarcan varias líneas.
+```java
+/*
+Este es un comentario
+de múltiples líneas.
+Puedo escribir aquí varias líneas de texto
+sin afectar el código.
+*/
+```
+
+- **Comentarios de documentación**: Estos comentarios se utilizan para generar documentación automática utilizando la herramienta Javadoc. Los comentarios de documentación siguen una estructura específica y se utilizan para describir clases, métodos, parámetros y valores de retorno.
+```java
+/**
+ * Esta clase representa un objeto de tipo Persona.
+ * Contiene atributos y métodos relacionados con una persona.
+ */
+public class Persona {
+    /**
+     * Este método devuelve el nombre de la persona.
+     * @return El nombre de la persona.
+     */
+    public String getNombre() {
+        // ...
+    }
+}
+```
+
+Los comentarios son una buena práctica de programación y te ayudan a mantener tu código organizado y comprensible. Utilízalos para explicar la lógica detrás de tu código, documentar decisiones importantes o proporcionar instrucciones a otros programadores que puedan trabajar en el mismo código en el futuro.
+
+
+---
+
 ## Operadores de asignación:
 * `+=`: a += b es equivalente a `a = a + b`.
 * `-=`: a -= b es equivalente a `a = a - b`.
