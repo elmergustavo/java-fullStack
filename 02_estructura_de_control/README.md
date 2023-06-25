@@ -67,4 +67,48 @@ Dentro del bucle, se compara el número ingresado por el usuario con el número 
 
 El programa también lleva un contador de intentos para mostrar cuántos intentos tomó al usuario adivinar el número.
 
+</details>
+
+---
+
+
+#### 2. `Ejercicio de determinar el día de la semana:` Escribe un programa que solicite al usuario ingresar un número del 1 al 7 que represente un día de la semana. Utilizando la estructura condicional if-else, muestra el nombre del día correspondiente (por ejemplo, 1 para "Lunes", 2 para "Martes", etc.).
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class DiaSemana {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un número del 1 al 7: ");
+        int numero = scanner.nextInt();
+
+        if (numero == 1) {
+            System.out.println("Lunes");
+        } else if (numero == 2) {
+            System.out.println("Martes");
+        } else if (numero == 3) {
+            System.out.println("Miércoles");
+        } else if (numero == 4) {
+            System.out.println("Jueves");
+        } else if (numero == 5) {
+            System.out.println("Viernes");
+        } else if (numero == 6) {
+            System.out.println("Sábado");
+        } else if (numero == 7) {
+            System.out.println("Domingo");
+        } else {
+            System.out.println("Número inválido");
+        }
+
+        scanner.close();
+    }
+}
+```
+</details>
+
 ---
