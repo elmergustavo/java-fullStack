@@ -1,7 +1,3 @@
-# Estructuras de control
-
-Estructuras de control: condicionales (if-else, switch), bucles (for, while, do-while) y estructuras de control adicionales.
-
 # Estructuras de Control en Java
 
 Este repositorio contiene ejemplos de estructuras de control en Java, incluyendo condicionales (if-else, switch), bucles (for, while, do-while) y otras estructuras de control adicionales.
@@ -108,6 +104,107 @@ public class DiaSemana {
         scanner.close();
     }
 }
+```
+</details>
+
+---
+
+#### 3. `Ejercicio de cálculo de descuento`: Escribe un programa que solicite al usuario ingresar el precio de un producto. Si el precio supera los $100, aplica un descuento del 10% y muestra el precio final; de lo contrario, muestra el precio sin descuento.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class Descuento {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el precio del producto: ");
+        double precio = scanner.nextDouble();
+
+        if (precio > 100) {
+            double descuento = precio * 0.1;
+            double precioFinal = precio - descuento;
+            System.out.println("Precio con descuento: $" + precioFinal);
+        } else {
+            System.out.println("Precio sin descuento: $" + precio);
+        }
+
+        scanner.close();
+    }
+}
+
+```
+</details>
+
+---
+
+#### 4. `Ejercicio de verificación de un triángulo`: Escribe un programa que solicite al usuario ingresar las longitudes de tres lados de un triángulo. Utilizando la estructura condicional if-else, verifica si es posible formar un triángulo con esas longitudes y muestra un mensaje correspondiente.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class VerificarTriangulo {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la longitud del primer lado: ");
+        double lado1 = scanner.nextDouble();
+
+        System.out.print("Ingrese la longitud del segundo lado: ");
+        double lado2 = scanner.nextDouble();
+
+        System.out.print("Ingrese la longitud del tercer lado: ");
+        double lado3 = scanner.nextDouble();
+
+        if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+            System.out.println("Se puede formar un triángulo con esas longitudes");
+        } else {
+            System.out.println("No se puede formar un triángulo con esas longitudes");
+        }
+
+        scanner.close();
+    }
+}
+
+```
+</details>
+
+---
+
+
+#### 5. `Ejercicio de conversión de temperaturas`: Escribe un programa que solicite al usuario ingresar una temperatura en grados Celsius. Utilizando la estructura condicional if-else, convierte la temperatura a grados Fahrenheit si es mayor o igual a 0, o a grados Kelvin si es menor a 0, y muestra el resultado.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class ConversionTemperatura {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese una temperatura en grados Celsius: ");
+        double celsius = scanner.nextDouble();
+
+        if (celsius >= 0) {
+            double fahrenheit = celsius * 9 / 5 + 32;
+            System.out.println("Temperatura en grados Fahrenheit: " + fahrenheit);
+        } else {
+            double kelvin = celsius + 273.15;
+            System.out.println("Temperatura en grados Kelvin: " + kelvin);
+        }
+
+        scanner.close();
+    }
+}
+
 ```
 </details>
 
