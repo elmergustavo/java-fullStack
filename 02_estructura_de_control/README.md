@@ -209,3 +209,167 @@ public class ConversionTemperatura {
 </details>
 
 ---
+
+# Ejercicios de Estructuras de Control en Java
+
+Este repositorio contiene una serie de ejercicios prácticos para practicar y reforzar los conceptos de estructuras de control en Java. Cada ejercicio se enfoca en un aspecto específico de las estructuras de control y tiene como objetivo mejorar tus habilidades de programación en Java.
+
+
+## Ejercicio 1: Estructuras de control anidadas
+
+**Descripción**: Este ejercicio solicita al usuario que ingrese su edad y género. Utilizando estructuras de control anidadas, el programa verifica si la edad ingresada es mayor o igual a 18 y luego verifica el género para mostrar un mensaje de bienvenida adecuado.
+
+**Objetivo**: Practicar el uso de estructuras de control anidadas y tomar decisiones basadas en múltiples condiciones.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class EstructurasAnidadas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+
+        System.out.print("Ingrese su género (M/F): ");
+        char genero = scanner.next().charAt(0);
+
+        if (edad >= 18) {
+            if (genero == 'M') {
+                System.out.println("Bienvenido, caballero");
+            } else {
+                System.out.println("Bienvenida, señorita");
+            }
+        } else {
+            System.out.println("Lo siento, eres menor de edad");
+        }
+    }
+}
+
+```
+</details>
+
+---
+
+
+## Ejercicio 2: Estructuras de control avanzadas
+
+**Descripción**: En este ejercicio, se solicita al usuario que ingrese la cantidad de números que desea ingresar. Luego, se utiliza un bucle "enhanced" for para permitir que el usuario ingrese los números uno por uno. Finalmente, se muestra en pantalla la lista de números ingresados.
+
+**Objetivo**: Practicar el uso del bucle "enhanced" for y la interacción con el usuario para ingresar datos.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class EnhancedForLoop {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese la cantidad de números: ");
+        int cantidad = scanner.nextInt();
+
+        int[] numeros = new int[cantidad];
+
+        System.out.println("Ingrese los números:");
+        for (int i = 0; i < cantidad; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        System.out.println("Los números ingresados son:");
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+    }
+}
+
+```
+</details>
+
+---
+
+## Ejercicio 3: Uso de operadores lógicos
+
+**Descripción**: En este ejercicio, se pide al usuario que ingrese su edad y si es estudiante o no. Utilizando operadores lógicos (AND, OR, NOT), el programa evalúa diferentes condiciones y muestra mensajes en función de las respuestas ingresadas.
+
+**Objetivo**: Practicar el uso de operadores lógicos en combinación con las estructuras de control para evaluar múltiples condiciones.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class OperadoresLogicos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+
+        System.out.print("¿Es estudiante? (S/N): ");
+        char respuesta = scanner.next().charAt(0);
+        boolean esEstudiante = respuesta == 'S' || respuesta == 's';
+
+        if (edad >= 18 && esEstudiante) {
+            System.out.println("Eres mayor de edad y eres estudiante");
+        }
+
+        if (edad < 18 || esEstudiante) {
+            System.out.println("Eres menor de edad o eres estudiante");
+        }
+
+        if (!esEstudiante) {
+            System.out.println("No eres estudiante");
+        }
+    }
+}
+
+```
+</details>
+
+---
+
+## Ejercicio 4: Manejo de excepciones
+
+**Descripción**: En este ejercicio, se solicita al usuario que ingrese un numerador y un denominador. El programa intenta realizar la división y muestra el resultado. Sin embargo, si el denominador es cero, se captura la excepción "ArithmeticException" y se muestra un mensaje de error en su lugar.
+
+**Objetivo**: Practicar el manejo de excepciones y cómo utilizar la estructura try-catch para evitar que el programa se detenga abruptamente por errores.
+
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class ManejoExcepciones {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el numerador: ");
+        int numerador = scanner.nextInt();
+
+        System.out.print("Ingrese el denominador: ");
+        int denominador = scanner.nextInt();
+
+        try {
+            int resultado = numerador / denominador;
+            System.out.println("El resultado es: " + resultado);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: División por cero");
+        }
+    }
+}
+
+```
+</details>
+
+---
+
+Estos ejercicios están diseñados para ayudarte a practicar diferentes aspectos de las estructuras de control en Java, como la anidación de estructuras, el uso de bucles, la evaluación de condiciones y el manejo de excepciones. Espero que te sean útiles para fortalecer tus habilidades de programación en Java.
+
+¡Diviértete aprendiendo y mejorando tus habilidades de programación! 😎
+
+
