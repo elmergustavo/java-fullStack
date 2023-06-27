@@ -2,6 +2,22 @@
 
 Este repositorio contiene ejemplos de estructuras de control en Java, incluyendo condicionales (if-else, switch), bucles (for, while, do-while) y otras estructuras de control adicionales.
 
+
+
+Este repositorio contiene ejemplos de código en Java relacionados con los diferentes flujos de control disponibles en el lenguaje. Los flujos de control son estructuras que permiten tomar decisiones y repetir acciones en función de ciertas condiciones. Los flujos de control disponibles en Java incluyen:
+
+1. **Estructura "if-else":** Permite ejecutar un bloque de código si se cumple una condición, y otro bloque de código si no se cumple. Se pueden utilizar operadores lógicos y de comparación para definir las condiciones.
+
+2. **Estructura "switch":** Permite evaluar diferentes casos y ejecutar un bloque de código correspondiente al caso que coincide con una expresión. Es una alternativa a la estructura "if-else" cuando se tienen múltiples condiciones.
+
+3. **Estructura "while":** Permite repetir un bloque de código mientras se cumpla una condición especificada. La condición se verifica antes de cada iteración.
+
+4. **Estructura "do-while":** Similar a la estructura "while", pero la condición se verifica después de cada iteración. Esto garantiza que el bloque de código se ejecute al menos una vez, incluso si la condición inicialmente es falsa.
+
+5. **Estructura "for":** Permite ejecutar un bloque de código un número específico de veces. Se utiliza para iterar sobre un rango de valores, como elementos de una lista o índices de un arreglo.
+
+
+
 ## Condicionales
 
 ### if-else
@@ -15,6 +31,137 @@ if (condicion) {
 } else {
     // Código a ejecutar si la condición es falsa
 }
+```
+
+### Ejemplos:
+
+```java
+import java.util.Scanner;
+
+public class IfElseExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingresa tu edad: ");
+        int edad = scanner.nextInt();
+        
+        if (edad >= 18) {
+            System.out.println("Eres mayor de edad");
+        } else {
+            System.out.println("Eres menor de edad");
+        }
+        
+        scanner.close();
+    }
+}
+
+```
+
+```java
+int edad = 25;
+
+if (edad < 18) {
+    System.out.println("Eres menor de edad");
+} else if (edad >= 18 && edad <= 65) {
+    System.out.println("Eres adulto");
+} else {
+    System.out.println("Eres mayor de edad");
+}
+
+```
+
+```java
+import java.util.Scanner;
+
+public class IfElseExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingresa tu género (Hombre/Mujer): ");
+        String genero = scanner.nextLine();
+        
+        if (genero.equalsIgnoreCase("Hombre")) {
+            System.out.println("Bienvenido");
+        } else if (genero.equalsIgnoreCase("Mujer")) {
+            System.out.println("Bienvenida");
+        } else {
+            System.out.println("Género no reconocido");
+        }
+        
+        scanner.close();
+    }
+}
+
+```
+
+
+```java
+import java.util.Scanner;
+
+public class IfElseExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingresa tu edad: ");
+        int edad = scanner.nextInt();
+        scanner.nextLine();
+        
+        System.out.print("¿Tienes un título universitario? (Sí/No): ");
+        String titulo = scanner.nextLine();
+        
+        System.out.print("¿Tienes experiencia laboral? (Sí/No): ");
+        String experiencia = scanner.nextLine();
+        
+        if (edad >= 22 && titulo.equalsIgnoreCase("Sí") && experiencia.equalsIgnoreCase("Sí")) {
+            System.out.println("Eres elegible para este empleo de nivel avanzado");
+        } else if (edad >= 18 && titulo.equalsIgnoreCase("Sí")) {
+            System.out.println("Eres elegible para este empleo de nivel intermedio");
+        } else {
+            System.out.println("No eres elegible para este empleo");
+        }
+        
+        scanner.close();
+    }
+}
+
+```
+
+
+```java
+import java.util.Scanner;
+
+public class IfElseExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingresa un número del 1 al 7: ");
+        int numero = scanner.nextInt();
+        
+        if (numero >= 1 && numero <= 7) {
+            if (numero == 1) {
+                System.out.println("Lunes");
+            } else if (numero == 2) {
+                System.out.println("Martes");
+            } else if (numero == 3) {
+                System.out.println("Miércoles");
+            } else if (numero == 4) {
+                System.out.println("Jueves");
+            } else if (numero == 5) {
+                System.out.println("Viernes");
+            } else if (numero == 6) {
+                System.out.println("Sábado");
+            } else {
+                System.out.println("Domingo");
+            }
+        } else {
+            System.out.println("Número inválido. Debe estar entre 1 y 7");
+        }
+        
+        scanner.close();
+    }
+}
+
+
 ```
 
 
