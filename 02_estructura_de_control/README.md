@@ -518,3 +518,196 @@ Estos ejercicios están diseñados para ayudarte a practicar diferentes aspectos
 ¡Diviértete aprendiendo y mejorando tus habilidades de programación! 😎
 
 
+Este es un breve tutorial que te introduce a la estructura de control switch en el lenguaje de programación Java. El switch es una forma eficiente de evaluar múltiples casos y ejecutar bloques de código según los resultados.
+
+## ¿Qué es el switch?
+
+El switch es una estructura de control que te permite realizar diferentes acciones según el valor de una expresión o variable. Puedes considerarlo como una serie de comparaciones que dirigen el flujo de ejecución hacia diferentes bloques de código.
+
+## Sintaxis básica
+
+```java
+switch (expresion) {
+    case valor1:
+        // Bloque de código para valor1
+        break;
+    case valor2:
+        // Bloque de código para valor2
+        break;
+    ...
+    default:
+        // Bloque de código por defecto
+}
+```
+- La expresión es evaluada y su resultado se compara con los casos definidos.
+- Cada caso representa un valor o conjunto de valores que se comparan con la expresión.
+- Si hay coincidencia entre la expresión y un caso, se ejecuta el bloque de código correspondiente.
+- La palabra clave `break` se utiliza para salir del switch después de ejecutar el bloque de código correspondiente.
+- El bloque `default` se ejecuta si no hay coincidencia con ninguno de los casos anteriores.
+
+```java
+String mes = "Enero";
+
+switch (mes) {
+    case "Enero":
+        System.out.println("Es el primer mes del año");
+        break;
+    case "Febrero":
+        System.out.println("Es el segundo mes del año");
+        break;
+    case "Marzo":
+        System.out.println("Es el tercer mes del año");
+        break;
+    default:
+        System.out.println("Mes desconocido");
+}
+```
+
+## Ejercicios:
+
+#### 1. `Ejercicio de días de la semana`: Escribe un programa que solicite al usuario un número del 1 al 7 y muestre el día de la semana correspondiente.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class DiasSemana {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un número del 1 al 7: ");
+        int numero = scanner.nextInt();
+
+        String diaSemana;
+        switch (numero) {
+            case 1:
+                diaSemana = "Lunes";
+                break;
+            case 2:
+                diaSemana = "Martes";
+                break;
+            case 3:
+                diaSemana = "Miércoles";
+                break;
+            case 4:
+                diaSemana = "Jueves";
+                break;
+            case 5:
+                diaSemana = "Viernes";
+                break;
+            case 6:
+                diaSemana = "Sábado";
+                break;
+            case 7:
+                diaSemana = "Domingo";
+                break;
+            default:
+                diaSemana = "Número inválido";
+        }
+        System.out.println("El día de la semana correspondiente es: " + diaSemana);
+    }
+}
+
+```
+</details>
+
+---
+
+#### 2. **Ejercicio de categorías de edad:**: Crea un programa que pida al usuario ingresar su edad y muestre un mensaje indicando en qué categoría de edad se encuentra (por ejemplo, "niño", "adolescente", "adulto").
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class CategoriasEdad {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+
+        String categoria;
+        switch (edad) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                categoria = "Niño";
+                break;
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                categoria = "Adolescente";
+                break;
+            default:
+                categoria = "Adulto";
+        }
+        System.out.println("Usted se encuentra en la categoría: " + categoria);
+    }
+}
+
+```
+</details>
+
+---
+
+
+#### 3. **Ejercicio de conversión de unidades:**: Desarrolla un programa que convierta una temperatura ingresada por el usuario en grados Celsius a una escala seleccionada (por ejemplo, Celsius a Fahrenheit o Celsius a Kelvin). Utiliza una estructura de control switch para manejar las diferentes opciones de conversión.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class CategoriasEdad {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su edad: ");
+        int edad = scanner.nextInt();
+
+        String categoria;
+        switch (edad) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                categoria = "Niño";
+                break;
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                categoria = "Adolescente";
+                break;
+            default:
+                categoria = "Adulto";
+        }
+        System.out.println("Usted se encuentra en la categoría: " + categoria);
+    }
+}
+
+```
+</details>
+
+---
