@@ -1,8 +1,6 @@
 # Estructuras de Control en Java
 
-Este repositorio contiene ejemplos de estructuras de control en Java, incluyendo condicionales (if-else, switch), bucles (for, while, do-while) y otras estructuras de control adicionales.
-
-
+En Java, las estructuras de control son bloques de código que permiten controlar el flujo de ejecución de un programa. Estas estructuras permiten tomar decisiones y repetir bloques de código según sea necesario
 
 Este repositorio contiene ejemplos de código en Java relacionados con los diferentes flujos de control disponibles en el lenguaje. Los flujos de control son estructuras que permiten tomar decisiones y repetir acciones en función de ciertas condiciones. Los flujos de control disponibles en Java incluyen:
 
