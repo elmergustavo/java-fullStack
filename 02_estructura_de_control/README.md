@@ -717,3 +717,47 @@ public class ConversionTemperatura {
 ---
 
 **[⬆ Volver a índice](#índice)**
+
+# Ciclo `while` en Java
+
+El ciclo `while` es una estructura de control en Java que permite repetir un bloque de código mientras se cumpla una condición específica. En cada iteración del ciclo, se evalúa la condición y si es verdadera, se ejecuta el bloque de código. Si la condición es falsa, se sale del ciclo y se continúa con la ejecución del programa.
+
+## Sintaxis
+
+La sintaxis básica del ciclo `while` es la siguiente:
+
+```java
+while (condicion) {
+    // Bloque de código a repetir
+}
+```
+
+La condicion es una expresión booleana que se evalúa antes de cada iteración. Si la condición es true, el bloque de código se ejecuta. Si la condición es false, se sale del ciclo.
+
+Es importante tener en cuenta que si la condición inicialmente es false, el bloque de código no se ejecutará nunca.
+
+### Ejemplo
+A continuación, se muestra un ejemplo de un programa que utiliza un ciclo while para contar hasta un número ingresado por el usuario:
+
+```java
+import java.util.Scanner;
+
+public class Contador {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa un número: ");
+        int numero = scanner.nextInt();
+
+        int contador = 1;
+        while (contador <= numero) {
+            System.out.print(contador + " ");
+            contador++;
+        }
+
+        scanner.close();
+    }
+}
+
+```
+
