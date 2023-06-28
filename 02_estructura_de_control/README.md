@@ -789,3 +789,426 @@ Este código solicita al usuario ingresar valores y muestra cada valor ingresado
 
 Recuerda que la condición en el ciclo while debe ser evaluada cuidadosamente para evitar bucles infinitos. Asegúrate de que la condición eventualmente se vuelva falsa para que el ciclo se detenga.
 
+## Ejercicios ciclo  `while`
+
+#### 1. **Validación de contraseña**: Escribe un programa que solicite al usuario ingresar una contraseña y valide que cumpla con ciertos criterios, como tener al menos 8 caracteres, incluir letras mayúsculas, minúsculas y números.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class ValidacionContrasena {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean contraseñaValida = false;
+
+        while (!contraseñaValida) {
+            System.out.print("Ingresa una contraseña: ");
+            String contraseña = scanner.nextLine();
+
+            if (contraseña.length() >= 8 && contraseña.matches(".*[A-Z].*") && contraseña.matches(".*[a-z].*") && contraseña.matches(".*\\d.*")) {
+                System.out.println("Contraseña válida");
+                contraseñaValida = true;
+            } else {
+                System.out.println("La contraseña no cumple los requisitos. Intenta nuevamente.");
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+```
+</details>
+
+---
+
+#### 2. **Calculadora avanzada**: Crea una calculadora que realice operaciones matemáticas avanzadas, como potenciación, raíz cuadrada y logaritmo. Permite al usuario elegir la operación y solicita los valores de entrada.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class CalculadoraAvanzada {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean salir = false;
+
+        while (!salir) {
+            System.out.println("Calculadora Avanzada");
+            System.out.println("1. Potenciación");
+            System.out.println("2. Raíz cuadrada");
+            System.out.println("3. Logaritmo");
+            System.out.println("4. Salir");
+            System.out.print("Elige una opción: ");
+            int opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.print("Ingresa la base: ");
+                    double base = scanner.nextDouble();
+                    System.out.print("Ingresa el exponente: ");
+                    double exponente = scanner.nextDouble();
+                    double resultadoPotencia = Math.pow(base, exponente);
+                    System.out.println("El resultado de la potencia es: " + resultadoPotencia);
+                    break;
+                case 2:
+                    System.out.print("Ingresa un número: ");
+                    double numeroRaiz = scanner.nextDouble();
+                    double resultadoRaiz = Math.sqrt(numeroRaiz);
+                    System.out.println("El resultado de la raíz cuadrada es: " + resultadoRaiz);
+                    break;
+                case 3:
+                    System.out.print("Ingresa un número: ");
+                    double numeroLogaritmo = scanner.nextDouble();
+                    double resultadoLogaritmo = Math.log(numeroLogaritmo);
+                    System.out.println("El resultado del logaritmo es: " + resultadoLogaritmo);
+                    break;
+                case 4:
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("Opción inválida. Intenta nuevamente.");
+                    break;
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+```
+</details>
+
+---
+
+#### 3. **Generación de contraseñas aleatorias**: Escribe un programa que genere contraseñas aleatorias de cierta longitud y complejidad. Permite al usuario elegir la longitud y los tipos de caracteres permitidos (letras mayúsculas, minúsculas, números y caracteres especiales).
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+import java.util.Random;
+
+public class GeneracionContrasena {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.print("Ingresa la longitud de la contraseña: ");
+        int longitud = scanner.nextInt();
+        scanner.nextLine(); // Consumir el salto de línea
+
+        System.out.println("Elige los tipos de caracteres permitidos:");
+        System.out.println("1. Letras mayúsculas");
+        System.out.println("2. Letras minúsculas");
+        System.out.println("3. Números");
+        System.out.println("4. Caracteres especiales");
+        System.out.println("5. Todos los anteriores");
+        System.out.print("Elige una opción: ");
+        int opcion = scanner.nextInt();
+        scanner.nextLine(); // Consumir el salto de línea
+
+        String caracteresPermitidos = "";
+
+        switch (opcion) {
+            case 1:
+                caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                break;
+            case 2:
+                caracteresPermitidos = "abcdefghijklmnopqrstuvwxyz";
+                break;
+            case 3:
+                caracteresPermitidos = "0123456789";
+                break;
+            case 4:
+                caracteresPermitidos = "!@#$%^&*()";
+                break;
+            case 5:
+                caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+                break;
+            default:
+                System.out.println("Opción inválida. Se generará una contraseña con letras mayúsculas y números.");
+                caracteresPermitidos = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                break;
+        }
+
+        String contraseñaGenerada = generarContraseña(longitud, caracteresPermitidos);
+        System.out.println("Contraseña generada: " + contraseñaGenerada);
+
+        scanner.close();
+    }
+
+    public static String generarContraseña(int longitud, String caracteresPermitidos) {
+        Random random = new Random();
+        StringBuilder contraseña = new StringBuilder();
+
+        for (int i = 0; i < longitud; i++) {
+            int indice = random.nextInt(caracteresPermitidos.length());
+            contraseña.append(caracteresPermitidos.charAt(indice));
+        }
+
+        return contraseña.toString();
+    }
+}
+
+```
+</details>
+
+---
+
+#### 4. **Cálculo del factorial**:  Pide al usuario que ingrese un número y calcula su factorial utilizando un ciclo while. Asegúrate de manejar los casos de números negativos y cero.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class CalculoFactorial {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa un número entero: ");
+        int numero = scanner.nextInt();
+
+        if (numero < 0) {
+            System.out.println("El factorial solo se puede calcular para números no negativos.");
+        } else {
+            int factorial = 1;
+            int contador = 1;
+
+            while (contador <= numero) {
+                factorial *= contador;
+                contador++;
+            }
+
+            System.out.println("El factorial de " + numero + " es: " + factorial);
+        }
+
+        scanner.close();
+    }
+}
+
+```
+</details>
+
+---
+
+#### 5. **Juego de adivinar palabras**:  Crea un juego en el que el programa elige una palabra al azar de una lista predefinida y el usuario debe adivinarla ingresando letras. Lleva un registro de los intentos y muestra las letras correctas a medida que se adivinan.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+import java.util.Random;
+
+public class JuegoAdivinarPalabras {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        String[] palabras = { "manzana", "pera", "banana", "naranja", "uva" };
+        String palabraAleatoria = palabras[random.nextInt(palabras.length)];
+        int intentos = 0;
+        boolean adivinado = false;
+        StringBuilder palabraAdivinada = new StringBuilder();
+
+        for (int i = 0; i < palabraAleatoria.length(); i++) {
+            palabraAdivinada.append("_");
+        }
+
+        System.out.println("¡Adivina la palabra!");
+
+        while (!adivinado) {
+            System.out.println("Palabra: " + palabraAdivinada);
+            System.out.print("Ingresa una letra: ");
+            char letra = scanner.nextLine().charAt(0);
+            intentos++;
+
+            for (int i = 0; i < palabraAleatoria.length(); i++) {
+                if (palabraAleatoria.charAt(i) == letra) {
+                    palabraAdivinada.setCharAt(i, letra);
+                }
+            }
+
+            if (palabraAdivinada.toString().equals(palabraAleatoria)) {
+                adivinado = true;
+            }
+        }
+
+        System.out.println("¡Felicidades! Adivinaste la palabra '" + palabraAleatoria + "' en " + intentos + " intentos.");
+
+        scanner.close();
+    }
+}
+
+
+```
+</details>
+
+---
+
+#### 6. **Ordenamiento de números**:  Solicita al usuario que ingrese una serie de números y luego ordénalos en forma ascendente utilizando el algoritmo de ordenamiento de burbuja.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class OrdenamientoNumeros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el número de elementos: ");
+        int n = scanner.nextInt();
+
+        int[] numeros = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Ingresa el elemento " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+        }
+
+        boolean intercambio = true;
+
+        while (intercambio) {
+            intercambio = false;
+
+            for (int i = 0; i < n - 1; i++) {
+                if (numeros[i] > numeros[i + 1]) {
+                    int temp = numeros[i];
+                    numeros[i] = numeros[i + 1];
+                    numeros[i + 1] = temp;
+                    intercambio = true;
+                }
+            }
+        }
+
+        System.out.println("Números ordenados:");
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(numeros[i]);
+        }
+
+        scanner.close();
+    }
+}
+
+```
+</details>
+
+---
+
+#### 7. **Conversión de números decimales a binarios**:  Pide al usuario que ingrese un número decimal y conviértelo a su representación binaria utilizando un ciclo while.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class ConversionDecimalBinario {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa un número decimal: ");
+        int numeroDecimal = scanner.nextInt();
+
+        StringBuilder numeroBinario = new StringBuilder();
+
+        while (numeroDecimal > 0) {
+            int residuo = numeroDecimal % 2;
+            numeroBinario.insert(0, residuo);
+            numeroDecimal /= 2;
+        }
+
+        System.out.println("El número en binario es: " + numeroBinario);
+
+        scanner.close();
+    }
+}
+
+```
+</details>
+
+---
+
+#### 8. **Validación de entrada numérica**:  Escribe un programa que solicite al usuario que ingrese una serie de números y valide que sean enteros positivos. Continúa solicitando números hasta que se ingrese un número negativo.
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class ValidacionEntradaNumerica {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int numero;
+        boolean salir = false;
+
+        while (!salir) {
+            System.out.print("Ingresa un número entero positivo: ");
+
+            if (scanner.hasNextInt()) {
+                numero = scanner.nextInt();
+
+                if (numero >= 0) {
+                    salir = true;
+                    System.out.println("Número válido: " + numero);
+                } else {
+                    System.out.println("El número debe ser positivo. Intenta nuevamente.");
+                }
+            } else {
+                System.out.println("Entrada inválida. Debe ser un número entero. Intenta nuevamente.");
+                scanner.next(); // Consumir la entrada inválida
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+
+```
+</details>
+
+---
+
+#### 9. **Generación de un patrón de asteriscos**:   Solicita al usuario que ingrese un número y muestra un patrón de asteriscos en forma de triángulo, utilizando un ciclo while para generar cada línea.
+
+<details><summary><b>Solución</b></summary>
+    
+```java
+import java.util.Scanner;
+
+public class SumaDigitos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa un número entero positivo: ");
+        int numero = scanner.nextInt();
+
+        int sumaDigitos = 0;
+
+        while (numero > 0) {
+            int digito = numero % 10;
+            sumaDigitos += digito;
+            numero /= 10;
+        }
+
+        System.out.println("La suma de los dígitos es: " + sumaDigitos);
+
+        scanner.close();
+    }
+}
+
+
+```
+</details>
+
+---
+
+
