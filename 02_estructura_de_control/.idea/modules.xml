@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/02_estructura_de_control.iml" filepath="$PROJECT_DIR$/02_estructura_de_control.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estructura_control.iml" filepath="$PROJECT_DIR$/Estructura_control.iml" />
     </modules>
   </component>
 </project>
