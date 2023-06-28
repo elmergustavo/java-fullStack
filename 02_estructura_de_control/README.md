@@ -789,6 +789,65 @@ Este código solicita al usuario ingresar valores y muestra cada valor ingresado
 
 Recuerda que la condición en el ciclo while debe ser evaluada cuidadosamente para evitar bucles infinitos. Asegúrate de que la condición eventualmente se vuelva falsa para que el ciclo se detenga.
 
+
+## Bucle Do-While
+
+El bucle do-while es una estructura de control utilizada en muchos lenguajes de programación. A diferencia del bucle while tradicional, el bucle do-while garantiza que se ejecute al menos una vez, ya que la condición se evalúa al final del bucle.
+
+## Sintaxis
+
+La sintaxis general del bucle do-while es la siguiente:
+
+```java
+do {
+  // Código a ejecutar
+} while (condición);
+```
+
+### ejemplo
+
+```java
+public class DoWhileExample {
+    public static void main(String[] args) {
+        int contador = 1;
+
+        do {
+            System.out.println("El valor del contador es: " + contador);
+            contador++;
+        } while (contador <= 5);
+    }
+}
+```
+
+En este ejemplo, el bucle "do-while" imprimirá el valor del contador mientras sea menor o igual a 5. La condición se verifica al final del bucle, lo que significa que el bucle se ejecutará al menos una vez antes de comprobar la condición.
+
+---
+
+En este ejemplo, el programa solicita al usuario que ingrese números hasta que se ingrese el número 0 para salir. Luego, calcula la suma de los números ingresados utilizando el bucle "do-while".
+
+```java
+import java.util.Scanner;
+
+public class DoWhileExample {
+    public static void main(String[] args) {
+        int suma = 0;
+        int numero;
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+            System.out.print("Ingresa un número (ingresa 0 para salir): ");
+            numero = scanner.nextInt();
+            suma += numero;
+        } while (numero != 0);
+
+        System.out.println("La suma de los números ingresados es: " + suma);
+    }
+}
+
+
+```
+
+
 ## Ejercicios ciclo  `while`
 
 #### 1. **Validación de contraseña**: Escribe un programa que solicite al usuario ingresar una contraseña y valide que cumpla con ciertos criterios, como tener al menos 8 caracteres, incluir letras mayúsculas, minúsculas y números.
