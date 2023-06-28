@@ -670,40 +670,33 @@ public class CategoriasEdad {
 ```java
 import java.util.Scanner;
 
-public class CategoriasEdad {
+public class ConversionTemperatura {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese su edad: ");
-        int edad = scanner.nextInt();
 
-        String categoria;
-        switch (edad) {
-            case 0:
+        System.out.print("Ingresa la temperatura en grados Celsius: ");
+        double celsius = scanner.nextDouble();
+
+        System.out.println("Elige la opción de conversión:");
+        System.out.println("1. Celsius a Fahrenheit");
+        System.out.println("2. Celsius a Kelvin");
+
+        int option = scanner.nextInt();
+
+        switch (option) {
             case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 10:
-                categoria = "Niño";
+                double fahrenheit = (celsius * 9/5) + 32;
+                System.out.printf("%.2f grados Celsius equivalen a %.2f grados Fahrenheit.", celsius, fahrenheit);
                 break;
-            case 11:
-            case 12:
-            case 13:
-            case 14:
-            case 15:
-            case 16:
-            case 17:
-                categoria = "Adolescente";
+            case 2:
+                double kelvin = celsius + 273.15;
+                System.out.printf("%.2f grados Celsius equivalen a %.2f grados Kelvin.", celsius, kelvin);
                 break;
             default:
-                categoria = "Adulto";
+                System.out.println("Opción inválida. Por favor, selecciona 1 o 2.");
         }
-        System.out.println("Usted se encuentra en la categoría: " + categoria);
+
+        scanner.close();
     }
 }
 
