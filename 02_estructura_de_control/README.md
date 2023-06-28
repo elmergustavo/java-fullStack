@@ -1,3 +1,12 @@
+## Índice
+
+- [Índice](#índice)
+  - [Introducción](#Introducción)
+    - [Instalar IntelliJ IDEA](#Instalar-IntelliJ-IDEA)
+    - [Variables](#variable)
+    - [Tipos de datos numéricos](#)
+    
+
 # Estructuras de Control en Java
 
 En Java, las estructuras de control son bloques de código que permiten controlar el flujo de ejecución de un programa. Estas estructuras permiten tomar decisiones y repetir bloques de código según sea necesario
@@ -520,6 +529,8 @@ Estos ejercicios están diseñados para ayudarte a practicar diferentes aspectos
 
 Este es un breve tutorial que te introduce a la estructura de control switch en el lenguaje de programación Java. El switch es una forma eficiente de evaluar múltiples casos y ejecutar bloques de código según los resultados.
 
+**[⬆ Volver a índice](#índice)**
+
 ## ¿Qué es el switch?
 
 El switch es una estructura de control que te permite realizar diferentes acciones según el valor de una expresión o variable. Puedes considerarlo como una serie de comparaciones que dirigen el flujo de ejecución hacia diferentes bloques de código.
@@ -704,3 +715,5 @@ public class ConversionTemperatura {
 </details>
 
 ---
+
+**[⬆ Volver a índice](#índice)**
