@@ -736,28 +736,56 @@ La condicion es una expresión booleana que se evalúa antes de cada iteración.
 
 Es importante tener en cuenta que si la condición inicialmente es false, el bloque de código no se ejecutará nunca.
 
-### Ejemplo
-A continuación, se muestra un ejemplo de un programa que utiliza un ciclo while para contar hasta un número ingresado por el usuario:
+### Contador ascendente:
+Este código imprimirá los números del 1 al 10 en orden ascendente.
 
 ```java
-import java.util.Scanner;
-
-public class Contador {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Ingresa un número: ");
-        int numero = scanner.nextInt();
-
-        int contador = 1;
-        while (contador <= numero) {
-            System.out.print(contador + " ");
-            contador++;
-        }
-
-        scanner.close();
-    }
+int contador = 1;
+while (contador <= 10) {
+    System.out.println(contador);
+    contador++;
 }
 
 ```
+### Contador descendente:
+Este código imprimirá los números del 10 al 1 en orden descendente.
+
+```java
+int contador = 10;
+while (contador >= 1) {
+    System.out.println(contador);
+    contador--;
+}
+
+```
+
+### Suma de números
+Este código calcula la suma de los números del 1 al 10 utilizando el ciclo `while`.
+```java
+int numero = 1;
+int suma = 0;
+while (numero <= 10) {
+    suma += numero;
+    numero++;
+}
+System.out.println("La suma de los números del 1 al 10 es: " + suma);
+
+```
+### Lectura de entrada hasta que se ingrese un valor específico:
+Este código calcula la suma de los números del 1 al 10 utilizando el ciclo `while`.
+```java
+Scanner scanner = new Scanner(System.in);
+String input = "";
+while (!input.equalsIgnoreCase("salir")) {
+    System.out.print("Ingresa un valor (escribe 'salir' para terminar): ");
+    input = scanner.nextLine();
+    System.out.println("Ingresaste: " + input);
+}
+scanner.close();
+
+```
+
+Este código solicita al usuario ingresar valores y muestra cada valor ingresado. El ciclo `while` continúa hasta que se ingresa la palabra "salir".
+
+Recuerda que la condición en el ciclo while debe ser evaluada cuidadosamente para evitar bucles infinitos. Asegúrate de que la condición eventualmente se vuelva falsa para que el ciclo se detenga.
 
