@@ -33,7 +33,7 @@ Si quieres unirte a nuestra comunidad de desarrollo, aprender programación de A
 ## Índice
 
 - [Índice](#índice)
-  - [Introducción](#Introducción)
+  - [#Introducción](https://github.com/elmergustavo/java-fullStack/tree/master/01_introduccion)
     - [Instalar IntelliJ IDEA](#Instalar-IntelliJ-IDEA)
     - [Variables](#variable)
     - [Tipos de datos numéricos](#)
