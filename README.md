@@ -34,7 +34,7 @@ Si quieres unirte a nuestra comunidad de desarrollo, aprender programación de A
 
 - [Índice](#índice)
   - [Introducción](https://github.com/elmergustavo/java-fullStack/tree/master/01_introduccion)
-  - [Estructuras de control]([https://github.com/elmergustavo/java-fullStack/tree/master/01_introduccion](https://github.com/elmergustavo/java-fullStack/tree/master/02_estructura_de_control))
+  - [Estructuras de control](https://github.com/elmergustavo/java-fullStack/tree/master/02_estructura_de_control)
   
 
 ---
