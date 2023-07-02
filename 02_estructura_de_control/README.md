@@ -1,11 +1,3 @@
-## Índice
-
-- [Índice](#índice)
-  - [Introducción](#Introducción)
-    - [Instalar IntelliJ IDEA](#Instalar-IntelliJ-IDEA)
-    - [Variables](#variable)
-    - [Tipos de datos numéricos](#)
-    
 
 # Estructuras de Control en Java
 
