@@ -67,7 +67,50 @@ String str = num.toString(); // Convertir el objeto Integer a una cadena de text
 int parsedInt = Integer.parseInt("123"); // Convertir una cadena de texto a un valor entero
 
 ```
+
+```java
+int sum = Integer.sum(10, 20); // Sumar dos enteros
+int compareResult = Integer.compare(10, 20); // Comparar dos enteros
+
+```
+
+```java
+int intValue = Integer.parseInt("42"); // Convertir una cadena de texto a un valor entero
+String binaryString = Integer.toBinaryString(42); // Convertir un entero a una cadena binaria
+int maxValue = Integer.max(10, 20); // Obtener el valor máximo entre dos enteros
+int minValue = Integer.min(10, 20); // Obtener el valor mínimo entre dos enteros
+
+```
 ### Ejemplo con la clase Double:
+
+```java
+double doubleValue = Double.parseDouble("3.14"); // Convertir una cadena de texto a un valor de punto flotante
+String hexString = Double.toHexString(3.14); // Convertir un valor de punto flotante a una cadena hexadecimal
+double maxValue = Double.max(1.23, 4.56); // Obtener el valor máximo entre dos números de punto flotante
+double minValue = Double.min(1.23, 4.56); // Obtener el valor mínimo entre dos números de punto flotante
+
+```
+
+### Ejemplo con la clase Character:
+
+```java
+boolean isDigit = Character.isDigit('9'); // Verificar si un carácter es un dígito
+boolean isLetter = Character.isLetter('A'); // Verificar si un carácter es una letra
+boolean isWhitespace = Character.isWhitespace(' '); // Verificar si un carácter es un espacio en blanco
+char toUpperCase = Character.toUpperCase('a'); // Convertir un carácter a mayúscula
+
+
+```
+
+### Ejemplo con la clase Boolean:
+
+```java
+boolean parsedBoolean = Boolean.parseBoolean("true"); // Convertir una cadena de texto a un valor booleano
+String toString = Boolean.toString(true); // Convertir un valor booleano a una cadena de texto
+boolean logicalAnd = Boolean.logicalAnd(true, false); // Realizar una operación lógica AND entre dos valores booleanos
+boolean logicalOr = Boolean.logicalOr(true, false); // Realizar una operación lógica OR entre dos valores booleanos
+
+```
 
 
 
