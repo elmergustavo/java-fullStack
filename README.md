@@ -44,3 +44,22 @@ Si quieres unirte a nuestra comunidad de desarrollo, aprender programación de A
 **[⬆ Volver a índice](#índice)**
 
 ---
+
+
+## Algunos vídeos en YouTube:
+
+<table style="width:100%">
+<tr>
+<td>
+<a href="https://youtu.be/Kp4Mvapo5kc">
+<img src="[http://i3.ytimg.com/vi/Kp4Mvapo5kc/maxresdefault.jpg](https://github.com/elmergustavo/elmergustavo/blob/master/assets/java/curso%20java%20parte%201.png)">
+</a>
+</td>
+<td>
+<a href="https://youtu.be/-pWSQYpkkjk">
+<img src="[http://i3.ytimg.com/vi/-pWSQYpkkjk/maxresdefault.jpg](https://github.com/elmergustavo/elmergustavo/blob/master/assets/java/curso%20java%20parte%202.png)https://github.com/elmergustavo/elmergustavo/blob/master/assets/java/curso%20java%20parte%202.png">
+</a>
+</td>
+
+</tr>
+</table>
